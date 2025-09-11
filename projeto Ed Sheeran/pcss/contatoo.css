@@ -1,0 +1,124 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+hr {
+    height: 6px;
+    background-color: #6D78A8;
+    color: #6D78A8;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    color: rgb(0, 0, 0);
+    width: 100px;
+    height: 100px;
+    background-color: #6D78A8;
+    border-radius: 45px;
+    border: 1px solid none;
+    transition: 0.3s;
+
+}
+
+.cabecalho {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.cabecalho li {
+    
+    margin-left: 5px;
+}
+
+.logo {
+    padding: 23px 0;
+    position: relative;
+    right: 20px;
+    right: 50px;
+    
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.fora {
+    background-color:transparent;
+    width: 420px;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(175, 175, 175);
+    border-radius: 45px;
+}
+
+.fora h1 {
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    top: 5px;
+    
+}
+
+.dentro {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 23px 0;
+    
+}
+
+.dentro input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(3, 3, 3);
+    padding: 22px 45px 20px 20px;
+    border: 1.5px solid rgb(128, 128, 128);
+    border-radius: 45px;
+    
+}
+
+.dentro input::placeholder {
+    color: rgb(27, 27, 27);
+}
+
+.enviar {
+    width: 100%;
+    height: 36px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600px;
+    box-shadow:  0 0 10px  rgba(0, 0, 0, .1);
+    
+}
+
+.enviar:hover {
+    background-color: transparent;
+    color: rgb(61, 110, 110);
+    border: 1px solid gray;
+    transition: 0.5s;
+}
+
+
