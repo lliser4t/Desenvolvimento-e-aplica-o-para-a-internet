@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Rick and Morty</title>
+</head>
+<body>
+    <div id="conteudo">
+        <ol id="lista"></ol>
+    </div>
+    <div id="conteudo2">
+        <ol id="personagens"></ol>
+    </div>
+    
+
+
+    <script>
+let url = 'https://rickandmortyapi.com/api/character'
+
+async function buscarDados() {
+    let resposta = await fetch(url)
+    let body = await resposta.json()
+    let conteudo = document.getElementById('conteudo')
+        
+    for (let i =0; i < body.results.length; i++) {
+        let item = document.createElement('p')
+        item.innerHTML = `${body.results[i].name} - ${body.results[i].gender}`
+        conteudo.appendChild(item)
+    }
+}
+
+buscarDados()
+
+async function listarDados(){
+    let resposta = await fetch(url)
+    let body = await resposta.json()
+    let lista = document.getElementById('lista')
+
+    for (let i=0; i < body.results.length; i++){
+        let item = document.createElement('li')
+        //item.innerHTML = `${body.results[i].name} - ${body.results[i].species}`
+        item.textContent = `${body.results[i].name} - ${body.results[i].species}`
+        lista.appendChild(item)
+    }
+}
+
+listarDados()
+
+
+async function Nome() {
+    let resposta = await fetch(url)
+    let body = await resposta.json()
+    let teste = document.getElementById('personagens')
+
+    for (let index = 0; index < body.results.length; index++) {
+        let ite = document.createElement('li')
+        filtragem = `${body.results[index].name} - ${body.results[index].image}`
+        let texto = JSON.stringify(filtragem)
+        
+        ite.textContent = texto
+        teste.appendChild(ite)
+    }
+}
+
+Nome()
+    </script>
+</body>
+</html>
